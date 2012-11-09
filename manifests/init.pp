@@ -7,7 +7,7 @@ class ntp (
   }
 
   cron { 'ntpdate':
-    command => "ntpdate $server",
+    command => "/usr/sbin/ntpdate $server",
     user    => 'root',
     minute  => '0',
     require => Package['ntpdate'],
